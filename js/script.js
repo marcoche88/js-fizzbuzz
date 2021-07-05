@@ -7,22 +7,23 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
 
 
 var result = "";
+var list = document.getElementById("list");
 
 for (var i = 1; i <= 100; i ++) {
     
     if (i % 3 === 0 && i % 5 === 0) {
         console.log("FizzBuzz");
-        result += " FizzBuzz";
+        result += "<li>FizzBuzz</li>";
     } else if (i % 3 === 0) {
         console.log("Fizz");
-        result += " Fizz";
+        result += "<li>Fizz</li>";
     } else if (i % 5 === 0) {
         console.log("Buzz");
-        result += " Buzz";
+        result += "<li>Buzz</li>";
     } else {
         console.log(i);
-        result += " " + i.toString();
+        result += "<li>" + i + "</li>";
     }
 }
 
-document.write(result);
+list.innerHTML = result;
