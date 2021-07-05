@@ -18,13 +18,16 @@ ol {
 li {
     padding: 5px;
     counter-increment: li;
+    font-weight: bold;
+    color: red;
 }
 
 ol li::before {
-    content: counter(li);
-    color: red;
+    content: counter(li)".";
+    color: black;
+    font-weight: normal;
     display: inline-block;
     width: 1em;
     margin-left: -1.5em;
-    margin-right: 1.5em;
+    margin-right: 3em;
 }
